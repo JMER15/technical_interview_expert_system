@@ -13,7 +13,8 @@
     <form method="POST">
         {% for preguntas_respuestas in preguntas_y_respuestas %}
             {% for pregunta_respuesta in preguntas_respuestas %}
-                <p>{{ pregunta_respuesta[0] }} {{ pregunta_respuesta[1] }}</p>
+                <!-- <p>{{ pregunta_respuesta[0] }} {{ pregunta_respuesta[1] }}</p> -->
+                <p>{{ pregunta_respuesta[1] }}</p>
                 <input type="text" name="respuesta_{{ pregunta_respuesta[0] }}">
             {% endfor %}
         {% endfor %}

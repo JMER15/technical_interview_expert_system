@@ -19,9 +19,11 @@
             <td>{{ pregunta.pregunta }}</td>
             <td>{{ pregunta.respuesta_usuario }}</td>
             <td>{{ pregunta.respuesta_correcta }}</td>
-            <td>{% if pregunta.resultado %} Correcta {% else %} Incorrecta {% endif %}</td>
+            <td>{% if pregunta.es_correcta %} Correcta {% else %} Incorrecta {% endif %}</td>
         </tr>
         {% endfor %}
     </table>
+    <!-- añadir boton volver atrás -->
+    <a href="/">Volver a la Entrevista</a>
 </body>
 </html>
