@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Página de Inicio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Bienvenido a la práctica de la entrevista de desarrollo web</h1>
+    <p>Responderás preguntas sobre HTML, CSS y otros temas relacionados.</p>
+    <!-- Botones con estilos de Bootstrap -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <button class="btn btn-primary btn-lg btn-block" id="pythonBtn" onclick="hacer_test('python')">Prueba Python</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-secondary btn-lg btn-block" id="cssBtn" onclick="hacer_test('css')">Prueba CSS</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
