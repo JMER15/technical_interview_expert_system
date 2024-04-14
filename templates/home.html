@@ -3,16 +3,31 @@
 {% block title %}Página de Inicio{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h1>Bienvenido a la práctica de la entrevista de desarrollo web</h1>
-    <p>Responderás preguntas sobre HTML, CSS y otros temas relacionados.</p>
-    <!-- Botones con estilos de Bootstrap -->
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <button class="btn btn-primary btn-lg btn-block" id="pythonBtn" onclick="hacer_test('python')">Prueba Python</button>
+
+<div class="jumbotron">
+    <img src="{{ url_for('static', filename='img/girl-pc.png') }}"  class="d-inline-block align-top" alt="Logo" />
+    <div>
+        <h1 class="display-4">Bienvenid@ a tu entrevista</h1>
+        <p class="lead">Selecciona el tipo de entrevista que quieras realizar</p>
+    </div>
+</div>
+
+<div id='container-cards' class="container mt-5">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='img/card-python.png') }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Prueba Python</h5>
+            <p class="card-text">Prueba técnica en Python para evaluar habilidades de programación y lógica.</p>
+            <button class="btn" id="pythonBtn" onclick="hacer_test('python')">Comenzar</button>
+
         </div>
-        <div class="col-md-6">
-            <button class="btn btn-secondary btn-lg btn-block" id="cssBtn" onclick="hacer_test('css')">Prueba CSS</button>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='img/card-css.png') }}"  alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Prueba CSS</h5>
+            <p class="card-text">Prueba técnica CSS para evaluar conocimientos de estilos, maquetación y diseño responsive.</p>
+            <button class="btn" id="cssBtn" onclick="hacer_test('css')">Comenzar</button>
         </div>
     </div>
 </div>
