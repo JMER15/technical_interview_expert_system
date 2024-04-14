@@ -11,6 +11,10 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>{% block title %}TechTest Expert System{% endblock %}</title>
     <script>
         function hacer_test(tipo) {
@@ -21,10 +25,9 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar">
             <a class="navbar-brand" href="#">
-                <img src="{{ url_for('static', filename='img/control-alt-supr.webp') }}" width="80" class="d-inline-block align-top" alt="Logo" />
-                TechTest
+                <h1>TechTest</h1>
             </a>
         </nav>    
         <ul class="navbar-nav">
@@ -50,8 +53,17 @@
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 - Mi Aplicación Flask</p>
-        <p>Pie de página personalizado aquí...</p>
+        <div>
+            <p>© 2024 TestTech Sistemas Expertos. Todos los derechos están reservados</p>
+            <!-- Cargar los iconos de facebook, tweeter, instagran tik tok , facebook con los iconos -->
+            <div class="icons_footer">
+                <a href="#"><i class="fab fa-facebook" id="icons"></i></a>
+                <a href="#"><i class="fab fa-twitter" id="icons"></i></a>
+                <a href="#"><i class="fab fa-instagram" id="icons"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in" id="icons"></i></a>
+                <a href="#"><i class="fab fa-snapchat" id="icons"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 

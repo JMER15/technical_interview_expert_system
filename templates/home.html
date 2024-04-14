@@ -7,7 +7,7 @@
 <div class="jumbotron">
     <img src="{{ url_for('static', filename='img/girl-pc.png') }}"  class="d-inline-block align-top" alt="Logo" />
     <div>
-        <h1 class="display-4">Bienvenid@ a tu entrevista</h1>
+        <h4 class="display-4">Bienvenid@ a tu entrevista</h4>
         <p class="lead">Selecciona el tipo de entrevista que quieras realizar</p>
     </div>
 </div>
@@ -27,6 +27,14 @@
         <div class="card-body">
             <h5 class="card-title">Prueba CSS</h5>
             <p class="card-text">Prueba técnica CSS para evaluar conocimientos de estilos, maquetación y diseño responsive.</p>
+            <button class="btn" id="cssBtn" onclick="hacer_test('css')">Comenzar</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='img/sistema-experto.png') }}"  alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Sistemas Expertos</h5>
+            <p class="card-text">Prueba técnica sobre Sistemas Expertos incluyendo implementación de lógica aplicaciones informáticas</p>
             <button class="btn" id="cssBtn" onclick="hacer_test('css')">Comenzar</button>
         </div>
     </div>

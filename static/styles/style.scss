@@ -1,8 +1,23 @@
 $background-color: #f7f9fa;
 $white: #ffffff;
 $purple: #8710d8;
-$dorado: #ffdf00;
+$golden: #ffdf00;
 $footer: #2d2f31;
+$light-blue: rgb(236, 236, 240);
+
+@font-face {
+  font-family: 'Jersey 10 Charted';
+  src: url('fonts/Jersey10Charted-Regular.ttf') format('truetype'); /* Ruta a la fuente en tu proyecto */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1 {
+  font-family: 'Jersey 10 Charted';
+  color: $purple;
+  margin-left: 10%;
+}
 
 * {
   margin: 0;
@@ -20,7 +35,9 @@ $footer: #2d2f31;
       display: flex;
       align-items: center;
       background-color: $white;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: $light-blue;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 4);
+  
 
       ul {
         display: flex;
@@ -28,7 +45,6 @@ $footer: #2d2f31;
         list-style: none;
         margin-left: auto;
         margin-right: 40px;
-        background-color: $white !important;
 
         li {
           margin-left: 30px;
@@ -51,12 +67,11 @@ $footer: #2d2f31;
         display: flex;
         justify-content: center;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 2%;
         background-color: $purple;
         color: $white;
 
         img {
-          width: 10%;
+          width: 8%;
           margin: 0% 2%;
         }
       }
@@ -64,6 +79,7 @@ $footer: #2d2f31;
       #container-cards {
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         .card {
           margin: 2%;
@@ -73,10 +89,19 @@ $footer: #2d2f31;
 
           img {
             width: 40%;
+            padding: 3%;
+            border-radius: 5px;
+  
+          }
+
+          .card-body{
+            height: 60%;
+            background-color: $light-blue;
+            padding: 3%;
           }
 
           button {
-            background-color: $dorado;
+            background-color: $golden;
             color: $purple;
             border: none;
             padding: 10px;
@@ -165,7 +190,8 @@ $footer: #2d2f31;
           color: rgb(56, 56, 56);
         }
 
-        tr td:nth-child(1) { // Columna Pregunta
+        tr td:nth-child(1) {
+          // Columna Pregunta
           font-weight: bold;
           color: rgb(56, 56, 56);
           background-color: $white;
@@ -194,7 +220,7 @@ $footer: #2d2f31;
         justify-content: center;
 
         #button-volver {
-          background-color: $dorado;
+          background-color: $golden;
           color: $purple;
           border: none;
           padding: 10px;
@@ -204,7 +230,7 @@ $footer: #2d2f31;
           border-radius: 5px;
           transition: transform 0.3s ease;
           width: 200px;
-  
+
           &:hover {
             background-color: $purple;
             color: $white;
@@ -212,11 +238,11 @@ $footer: #2d2f31;
             cursor: pointer;
           }
         }
-      }      
+      }
     }
 
     footer {
-      height: 30%;
+      height: 40%;
       background-color: $footer;
       color: $white;
       display: flex;
@@ -224,6 +250,23 @@ $footer: #2d2f31;
       align-items: center;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       font-size: 16px;
+
+      .icons_footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+
+        a {
+          margin: 0 10px;
+          color: $white;
+          text-decoration: none;
+          font-size: 2rem;
+        }
+      }
+
     }
+
   }
 }

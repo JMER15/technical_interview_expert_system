@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Jersey 10 Charted";
+  src: url("fonts/Jersey10Charted-Regular.ttf") format("truetype"); /* Ruta a la fuente en tu proyecto */
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: "Jersey 10 Charted";
+  color: #8710d8;
+  margin-left: 10%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +26,8 @@
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(236, 236, 240);
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
 }
 * body header ul {
   display: flex;
@@ -22,7 +35,6 @@
   list-style: none;
   margin-left: auto;
   margin-right: 40px;
-  background-color: #ffffff !important;
 }
 * body header ul li {
   margin-left: 30px;
@@ -42,17 +54,17 @@
   display: flex;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 2%;
   background-color: #8710d8;
   color: #ffffff;
 }
 * body .content .jumbotron img {
-  width: 10%;
+  width: 8%;
   margin: 0% 2%;
 }
 * body .content #container-cards {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 * body .content #container-cards .card {
   margin: 2%;
@@ -62,6 +74,13 @@
 }
 * body .content #container-cards .card img {
   width: 40%;
+  padding: 3%;
+  border-radius: 5px;
+}
+* body .content #container-cards .card .card-body {
+  height: 60%;
+  background-color: rgb(236, 236, 240);
+  padding: 3%;
 }
 * body .content #container-cards .card button {
   background-color: #ffdf00;
@@ -182,7 +201,7 @@
   cursor: pointer;
 }
 * body footer {
-  height: 30%;
+  height: 40%;
   background-color: #2d2f31;
   color: #ffffff;
   display: flex;
@@ -190,4 +209,17 @@
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 16px;
+}
+* body footer .icons_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+* body footer .icons_footer a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */
