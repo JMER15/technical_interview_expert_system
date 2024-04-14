@@ -9,15 +9,15 @@
         <tr>
             <th>Pregunta</th>
             <th>Respuesta del Usuario</th>
-            <th>Respuesta Correcta</th>
-            <th>Resultado</th>
+            <!-- <th>Respuesta Correcta</th> -->
+            <!-- <th>Resultado</th> -->
         </tr>
         {% for pregunta in resultados %}
         <tr>
             <td>{{ pregunta.pregunta }}</td>
             <td>{{ pregunta.respuesta_usuario }}</td>
-            <td>{{ pregunta.respuesta_correcta }}</td>
-            <td>{% if pregunta.es_correcta %} Correcta {% else %} Incorrecta {% endif %}</td>
+            <!-- <td>{{ pregunta.respuesta_correcta }}</td> -->
+            <!-- <td>{% if pregunta.es_correcta %} Correcta {% else %} Incorrecta {% endif %}</td> -->
         </tr>
         {% endfor %}
     </table>

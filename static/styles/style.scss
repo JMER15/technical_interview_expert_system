@@ -125,7 +125,7 @@ $footer: #2D2F31;
 
           input {
             border-radius: 5px;
-            height: 100px;
+            height: 40px;
           }
 
           #button-container {
@@ -153,13 +153,17 @@ $footer: #2D2F31;
         }
 
         table {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 100%;
           border-collapse: collapse;
-          margin-bottom: 20px;
       }
       
       table, th, td {
-          border: 1px solid #ccc;
+        align-items: center;
+        width: 60%;
+        border: 1px solid #ccc;
       }
       
       th, td {

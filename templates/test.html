@@ -9,7 +9,7 @@
         {% for preguntas_respuestas in preguntas_y_respuestas %}
             {% for pregunta_respuesta in preguntas_respuestas %}
                 <label><p>{{ pregunta_respuesta[1] }}</p></label>
-                <input class="form-control" type="text" name="respuesta_{{ pregunta_respuesta[0] }}">
+                <input class="form-control" type="text" name="respuesta_{{ pregunta_respuesta[0] }}" maxlength="130">
             {% endfor %}
         {% endfor %}
         
