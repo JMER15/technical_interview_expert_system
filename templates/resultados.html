@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de la Entrevista</title>
-</head>
-<body>
-    <h1>Resultados de la Entrevista</h1>
+{% extends 'base.html' %}
+
+{% block title %}Página de Resultados{% endblock %}
+
+{% block content %}
+<h2 class="text-center" id='results-title'>Resultados</h2>
+
     <table>
         <tr>
             <th>Pregunta</th>
@@ -25,5 +23,4 @@
     </table>
     <!-- añadir boton volver atrás -->
     <a href="/">Volver a la Entrevista</a>
-</body>
-</html>
+{% endblock %}
