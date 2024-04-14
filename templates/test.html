@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica de Entrevista</title>
-</head>
+{% block title %}Página de Test{% endblock %}
 
-<body>
-    <h1>Bienvenido a la práctica de la entrevista de desarrollo web</h1>
-    <p>Responderás preguntas sobre HTML, CSS y otros temas relacionados.</p>
-    <form method="POST">
+{% block content %}
+    <h2 class="text-center" id='test-title'>Prueba de {{ language }}</h2>
+    
+    <form method="POST" class="form-group" id='language-test-form'>
         {% for preguntas_respuestas in preguntas_y_respuestas %}
             {% for pregunta_respuesta in preguntas_respuestas %}
-                <!-- <p>{{ pregunta_respuesta[0] }} {{ pregunta_respuesta[1] }}</p> -->
-                <p>{{ pregunta_respuesta[1] }}</p>
-                <input type="text" name="respuesta_{{ pregunta_respuesta[0] }}">
+                <label><p>{{ pregunta_respuesta[1] }}</p></label>
+                <input class="form-control" type="text" name="respuesta_{{ pregunta_respuesta[0] }}">
             {% endfor %}
         {% endfor %}
-        <br><br>
-        <button type="submit">Enviar Respuestas</button>
+        
+        <div id='button-container'>
+        <button class="btn btn-success" type="submit">Enviar</button>
+        </div>
     </form>
-</body>
-
-</html>
+{% endblock %}
