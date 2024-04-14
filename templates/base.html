@@ -8,9 +8,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <title>{% block title %}Mi Aplicación Flask{% endblock %}</title>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>{% block title %}TechTest Expert System{% endblock %}</title>
     <script>
         function hacer_test(tipo) {
             window.location.href = `/test/${tipo}`;
@@ -19,9 +20,27 @@
 </head>
 
 <body>
-    <!-- Encabezado -->
     <header>
-        
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='img/control-alt-supr.webp') }}" width="80" class="d-inline-block align-top" alt="Logo" />
+                TechTest
+            </a>
+        </nav>    
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Tutoriales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Inicio</a>
+            </li>
+        </ul>
     </header>
 
     <!-- Contenido principal -->
@@ -34,8 +53,6 @@
         <p>&copy; 2024 - Mi Aplicación Flask</p>
         <p>Pie de página personalizado aquí...</p>
     </footer>
-
-    <!-- Agregar aquí enlaces a scripts JS u otros elementos al final del cuerpo -->
 </body>
 
 </html>
