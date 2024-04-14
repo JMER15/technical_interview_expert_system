@@ -1,0 +1,197 @@
+$background-color: #F7F9FA;
+$white: #FFFFFF;
+$purple: #8710D8;
+$dorado: #FFDF00;
+$footer: #2D2F31;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+      display: flex;
+      flex-direction: column;
+
+      header {
+        height: 10%;
+        display: flex;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+        ul {
+            display: flex;
+            flex-direction: row !important;
+            list-style: none;
+            margin-left: auto;
+            margin-right: 40px;
+            background-color: $white !important;
+            
+            li {
+                margin-left: 30px;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 16px;
+                }
+            }
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        background-color: $white;
+
+        .jumbotron {
+          display: flex;
+          justify-content: center;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          padding: 2%;
+          background-color: $purple;
+          color: $white;
+  
+          img {
+              width: 10%;
+              margin: 0% 2%;
+          }
+        }
+
+        #container-cards {
+          display: flex;
+          flex-direction: row;
+    
+          .card {
+            margin: 2%;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+            img {
+              width: 40%;
+            }
+    
+            button {
+              background-color: $dorado;
+              color: $purple;
+              border: none;
+              padding: 10px;
+              margin: 10px;
+              font-size: 16px;
+              font-weight: bold;
+              border-radius: 5px;
+              transition: transform 0.3s ease; 
+              
+              &:hover {
+                background-color: $purple;
+                color: $white;
+                transform: scale(1.05); 
+              cursor: pointer; 
+              }
+            }
+          
+    
+          }
+          
+        }
+
+        #test-title {
+          
+          margin-top: 3%;
+        }
+
+        #language-test-form {
+          display: flex;
+          flex-direction: column;
+          margin: 2% 10%;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          padding: 2%;
+          background-color: rgb(190, 190, 190);
+          color: black;
+          border-radius: 5px;
+          transition: transform 0.3s ease; 
+          
+          h2 {
+            margin: 2%;
+          }
+
+          label {
+            margin: 2px 0;
+          }
+
+          input {
+            border-radius: 5px;
+            height: 100px;
+          }
+
+          #button-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 3%;
+          }
+
+          button {
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s ease; 
+            margin: 10px;
+            width: 10%;
+          
+            &:hover {
+              transform: scale(1.05); 
+              cursor: pointer; 
+            }
+          }
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+      }
+      
+      table, th, td {
+          border: 1px solid #ccc;
+      }
+      
+      th, td {
+          padding: 12px;
+          text-align: left;
+      }
+      
+      th {
+          background-color: #f2f2f2;
+          color: #333;
+      }
+      
+      tr:nth-child(even) {
+          background-color: #f9f9f9;
+      }
+      
+      tr:hover {
+          background-color: #e9e9e9;
+      }
+      
+      }
+
+      footer {
+        height: 30%;
+        background-color: $footer;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+    }
+    
+    }
+}
