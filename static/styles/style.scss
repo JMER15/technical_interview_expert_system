@@ -188,6 +188,31 @@ $footer: #2d2f31;
         background-color: #f8d7da;
         color: #721c24;
       }
+
+      #container-button-volver {
+        display: flex;
+        justify-content: center;
+
+        #button-volver {
+          background-color: $dorado;
+          color: $purple;
+          border: none;
+          padding: 10px;
+          margin: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 5px;
+          transition: transform 0.3s ease;
+          width: 200px;
+  
+          &:hover {
+            background-color: $purple;
+            color: $white;
+            transform: scale(1.05);
+            cursor: pointer;
+          }
+        }
+      }      
     }
 
     footer {

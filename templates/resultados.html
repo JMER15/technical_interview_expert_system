@@ -3,7 +3,14 @@
 {% block title %}Página de Resultados{% endblock %}
 
 {% block content %}
-<h2 class="text-center" id='results-title'>Resultados</h2>
+<div class="jumbotron">
+    <img src="{{ url_for('static', filename='img/man-pc-bg.png') }}"  class="d-inline-block align-top" alt="Logo" />
+    <div>
+        <h2 class="display-4">Gracias por tu tiempo</h2>
+        <p class="lead">Esta es el resultado de tu entrevista.</p>
+        <p class="lead">Te contactaremos en breve para darte una respuesta.</p>
+    </div>
+</div>
 
 <table>
     <tr>
@@ -27,5 +34,7 @@
 </table>
 
     <!-- añadir boton volver atrás -->
-    <a href="/">Volver a la Entrevista</a>
-{% endblock %}
+    <div id='container-button-volver'>
+    <a href="/" class="btn btn-outline-primary" id='button-volver'>Volver a Inicio</a>
+    </div>
+    {% endblock %}
