@@ -1,6 +1,6 @@
 import spacy
 import time
-from knowledge import preguntas_y_respuestas
+from test.knowledge import preguntas_y_respuestas
 
 # Cargar el modelo de spaCy en español
 nlp = spacy.load("es_core_news_lg")
