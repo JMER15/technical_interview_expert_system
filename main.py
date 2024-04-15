@@ -1,3 +1,19 @@
+"""
+Proyecto Web: Entrevista de Trabajo
+
+Este proyecto consiste en una aplicación web que simula una entrevista de trabajo. 
+El usuario podrá seleccionar el idioma en el que desea realizar la entrevista y 
+se le mostrarán una serie de preguntas. El usuario deberá responder a las preguntas y 
+al finalizar se le mostrará un resumen de su desempeño.
+
+- Módulo: Modelos de Inteligencia Artificial(MIA)
+- Autores: 
+    - Virginia Ordoño Bernier
+    - José Miguel Escribano Ruiz
+- Fecha: 15/04/2024
+- Versión: 1.0
+"""
+
 from flask import Flask, render_template, request
 from utils import *
 
