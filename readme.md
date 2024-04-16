@@ -1,5 +1,7 @@
 # Desarrollo del Proyecto "TechTest: Sistema Experto para Entrevistas Técnicas."
 
+![expert_system](./static/img/sistema-experto.png)
+
 ## Contenido
 
 - **[1. Descripción](#1-descripción)**
@@ -34,15 +36,15 @@ El objetivo principal del proyecto es facilitar y automatizar el proceso de entr
 
 Al ingresar a la página principal, el usuario podrá ver las diferentes categorías de preguntas disponibles.
 
-[home_page]("./static/img/home_page.png")
+![home_page](./static/img/home_page.png)
 
 Al hacer clic en una categoría, se desplegarán las preguntas correspondientes a esa categoría. El usuario deberá de rellenar el formulario con sus respuestas.
 
-[test_page]("./static/img/test_page.png")
+![test_page](./static/img/test_page.png)
 
 Al finalizar podrá ver el resultado de su prueba, en la que se le indicará cuantas respuestas correctas ha tenido y cuantas incorrectas.
 
-[result_page]("./static/img/result_page.png")
+![result_page](./static/img/result_page.png)
 
 [subir](#contenido)
 
