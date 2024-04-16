@@ -1,8 +1,8 @@
-# Desarrollo del Proyecto "TechTest": Sistema Experto para Entrevistas Técnicas."
+# Desarrollo del Proyecto "TechTest: Sistema Experto para Entrevistas Técnicas."
 
 ## Contenido
 
-- **[1. Descripcion](#1-descripción)**
+- **[1. Descripción](#1-descripción)**
 - **[2. Objetivo](#2-objetivo)**
 - **[3. Funcionamiento de la aplicación](#3-funcionamiento-de-la-aplicación)**
 - **[4. Tecnologías utilizadas](#4-tecnologías-utilizadas)**
