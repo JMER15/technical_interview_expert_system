@@ -8,7 +8,7 @@
 - **[2. Objetivo](#2-objetivo)**
 - **[3. Funcionamiento de la aplicación](#3-funcionamiento-de-la-aplicación)**
 - **[4. Tecnologías utilizadas](#4-tecnologías-utilizadas)**
-- **[5. Estructura del proyecto](#5-estructura-del-proyecto)**
+- **[5. Estructura del proyecto](#5-estructura-del-proyecto)**Descri
 - **[6. Flujo de Trabajo](#6-flujo-de-trabajo)**
 - **[7. Mejoras](#8mejoras)**
 - **[8. Licencia](#9-licencia)**
@@ -17,7 +17,7 @@
 ## 1. Descripción.
 
 El proyecto **TechTest** es una aplicación web que tiene como propósito realizar una entrevista técnica a un usuario a través de diferentes preguntas de un formulario. Tras la evaluación de las respuestas, la persona encargada de selección de personal podrá consultarlo tras saber si ha pasado la prueba o no. 
-La aplicación proporciona pruebas de diferentes categorías dentro del mundo del desarrollo web. En esta versión se mostrarán 6 preguntas por categoría las cuales serán seleccionadas de manera aleatoria de la base de conocimeinto. Se espera que en futuras versiones se puedan añadir más preguntas. 
+La aplicación proporciona pruebas de diferentes categorías dentro del mundo del desarrollo web. En esta versión se mostrarán 6 preguntas por categoría las cuales serán seleccionadas de manera aleatoria de la base de conocimiento. Se espera que en futuras versiones se puedan añadir más preguntas. 
 
 [subir](#contenido)
 
@@ -70,8 +70,6 @@ El proyecto está estructurado de la siguiente manera:
 
 - **main.py**: Archivo principal de la aplicación, contiene las rutas y las funciones que se ejecutan al realizar una solicitud HTTP.
   
-- **main_con_cmd.py**: Exactamente igual que el main.py, pero con la diferencia de que este archivo se ejecuta desde la **cmd.**
-
 - **technical_interview_questions.db**: Base de datos SQLite que contiene las preguntas y respuestas de la aplicación.
   
 - **utils.py**: "El archivo utils.py contiene una colección de funciones de utilidad diseñadas para simplificar y mejorar el estilo del archivo principal main.py, proporcionando una forma más elegante y eficiente de realizar tareas específicas dentro del proyecto.
@@ -114,9 +112,7 @@ __Paso 6__: Pruebas técnicas.
 - **Mejorar la interfaz de usuario**: Se puede mejorar la interfaz de usuario para que sea más atractiva y fácil de usar.
   
 - **Añadir un cronómetro**: Se puede añadir un cronómetro para limitar el tiempo que los usuarios tienen para responder a las preguntas.
-    
-- **Añadir una función de retroalimentación**: Se puede añadir una función de retroalimentación para proporcionar a los usuarios información adicional sobre las respuestas correctas e incorrectas.
-  
+      
 - **Añadir una función de revisión de respuestas**: Se puede añadir una función que permita a los usuarios revisar sus respuestas y corregirlas antes de finalizar la prueba.
   
 - **Añadir una función de generación de informes**: Se puede añadir una función que genere un informe detallado de los resultados de la prueba, incluyendo las respuestas correctas e incorrectas, el tiempo empleado y la puntuación obtenida.
