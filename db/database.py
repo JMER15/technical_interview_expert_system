@@ -9,6 +9,7 @@ cursor = conn.cursor()
 # borrar si ejecutamos de nuevo 
 cursor.execute("DROP TABLE IF EXISTS qa_pair_python")
 cursor.execute("DROP TABLE IF EXISTS qa_pair_css")
+cursor.execute("DROP TABLE IF EXISTS qa_pair_expert_systems")
 
 # Tabla qa_pair_python para preguntas y respuestas sobre python
 create_table_query = '''
@@ -30,9 +31,19 @@ create_table_query2 = '''
     );
 '''
 
+create_table_query3 = '''
+    CREATE TABLE qa_pair_expert_systems (
+        id INTEGER PRIMARY KEY,
+        question TEXT NOT NULL,
+        answer TEXT NOT NULL,
+        level INTEGER NOT NULL
+    );
+'''
+
 # Ejecuta las sentencia SQL para crear la tabla
 cursor.execute(create_table_query)
 cursor.execute(create_table_query2)
+cursor.execute(create_table_query3)
 
 # Preguntas y respuestas sobre python
 qa_pair_python = [
@@ -64,6 +75,17 @@ qa_pair_css = [
     ("¿Qué es un media query en CSS?", "Un media query en CSS es una técnica que permite aplicar estilos basados en las características del dispositivo, como el ancho de la pantalla o la orientación.", 1),
 ]
 
+# Preguntas y respuestas sobre expert systems
+qa_pair_expert_systems = [
+    ("¿Qué es un sistema experto?", "Software capaz de simular el proceso de decisión que tomaría un experto humano en cierto campo en la solución de un problema.", 1),
+    ("Características de los sistemas expertos", "Especialización, emulación del pensamiento humano, capacidad de aprendizajje, interactividad", 3),
+    ("Tipos de sistemas expertos", "Casos, árboles de decisión, redes bayesianas, reglas", 2),
+    ("¿Qué 3 tipos de conocimiento puede aportar un experto?", "Procedimental, heurístico, factual", 2)
+    ("¿Qué dos estrategias de control se utilizan en los sistemas expertos?", "Razonamiento hacia adelante y razonamiento hacia atrás", 1),
+    ("¿Qué es el razonamiento hacia adelante?", "Se parte de los datos y se llega a las conclusiones", 3),
+    ("¿Qué es el razonamiento hacia atrás?", "Se parte de las conclusiones y se llega a los datos", 2),
+]
+    
 
 # Define las sentencias SQL para insertar los datos
 insert_query = '''

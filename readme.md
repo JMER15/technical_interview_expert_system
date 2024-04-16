@@ -1,4 +1,4 @@
-# Desarrollo del Proyecto "WebWizard: Tu Guía Experta para Entrevistas de Desarrollo Web."
+# Desarrollo del Proyecto "TechTest": Sistema Experto para Entrevistas Técnicas."
 
 ## Contenido
 
@@ -8,26 +8,41 @@
 - **[4. Tecnologías utilizadas](#4-tecnologías-utilizadas)**
 - **[5. Estructura del proyecto](#5-estructura-del-proyecto)**
 - **[6. Flujo de Trabajo](#6-flujo-de-trabajo)**
-- **[7. Uso de la aplicación](#7-uso-de-la-aplicación)**
-- **[8. Mejoras](#8mejoras)**
-- **[9. Licencia](#9-licencia)**
-- **[10. Autores](#10-autores)**
+- **[7. Mejoras](#8mejoras)**
+- **[8. Licencia](#9-licencia)**
+- **[9. Autores](#10-autores)**
 
 ## 1. Descripción.
 
-El proyecto **WebWizard** es una aplicación web que tiene como objetivo ayudar a los estudiantes de desarrollo web a prepararse para realizar entrevistas de trabajo. La aplicación proporciona una serie de preguntas de diferentes categorías en el mundo del desarrollo web, como por ejemplo **"CSS"**, **"Python"** y **"Modelos de Inteligencia Artificial (IA)"** entre otros. 
+El proyecto **TechTest** es una aplicación web que tiene como propósito realizar una entrevista técnica a un usuario a través de diferentes preguntas de un formulario. Tras la evaluación de las respuestas, la persona encargada de selección de personal podrá consultarlo tras saber si ha pasado la prueba o no. 
+La aplicación proporciona pruebas de diferentes categorías dentro del mundo del desarrollo web. En esta versión se mostrarán 6 preguntas por categoría las cuales serán seleccionadas de manera aleatoria de la base de conocimeinto. Se espera que en futuras versiones se puedan añadir más preguntas. 
 
 [subir](#contenido)
 
 ## 2. Objetivo.
 
-El objetivo de este proyecto es crear un **Sistema Experto**, capaz de presentar a los estudiantes las preguntas más frecuentes en entrevistas de trabajo, de manera que puedan prepararse para responderlas de la mejor manera posible. La idea principal de este proyecto es que sea escalable y que se puedan añadir nuevas preguntas y categorías de manera sencilla, en esta primera versión se han añadido 3 categorías de preguntas.
+El objetivo principal del proyecto es facilitar y automatizar el proceso de entrevistas técnicas para roles relacionados con el desarrollo. Se ha pretendido cumplir con los elementos que caracterizan a los sistemas expertos como tal los cuales son:
+- Interfaz de usuario y de comunicación externa a través de una aplicación en Flask.
+- Base de datos de conocimiento. Las preguntas de las entrevistas, las respuestas esperadas, las categorías de las pruebas. 
+- Motor de inferencia. Reglas que evalúan las respuestas y generan el resultado automatizado sobre el desempeño del candidato.
+- Sistema para la explicación de las decisiones tomadas. Mostrando qué respuestas fueron correctas o incorrectas se determina cómo se llega a la conclusión de si un candidato debe seguir en el proceso de entrevista o no.
+- Sistema para la adquisición de nuevo conocimiento. El sistema cuenta con la capacidad de agregar nuevas preguntas, actualizar respuestas esperadas o incluso introducir nuevas categorías de pruebas según las tendencias y cambios en el campo del desarrollo web. 
 
 [subir](#contenido)
 
 ## 3. Funcionamiento de la aplicación.
 
-La aplicación **WebWizard** es muy sencilla de utilizar, al ingresar a la página principal, el usuario podrá ver las diferentes categorías de preguntas disponibles, al hacer clic en una categoría, se desplegarán las preguntas correspondientes a esa categoría. Las preguntas inicialmente en esta versión serán **6 por categoría**, pero se espera que en futuras versiones se puedan añadir más preguntas. El usuario deberá de rellenar el formulario con sus respuestas y al finalizar podrá ver el resultado de su prueba, en la que se le indicará cuantas respuestas correctas ha tenido y cuantas incorrectas.
+Al ingresar a la página principal, el usuario podrá ver las diferentes categorías de preguntas disponibles.
+
+[home_page]("./static/img/home_page.png")
+
+Al hacer clic en una categoría, se desplegarán las preguntas correspondientes a esa categoría. El usuario deberá de rellenar el formulario con sus respuestas.
+
+[test_page]("./static/img/test_page.png")
+
+Al finalizar podrá ver el resultado de su prueba, en la que se le indicará cuantas respuestas correctas ha tenido y cuantas incorrectas.
+
+[result_page]("./static/img/result_page.png")
 
 [subir](#contenido)
 
@@ -37,13 +52,13 @@ La aplicación **WebWizard** es muy sencilla de utilizar, al ingresar a la pági
 Framework para Python. Se utiliza en este proyecto para crear la aplicación web y manejar las rutas y las solicitudes HTTP.
 
 - [SpaCy](https://spacy.io)
-Biblioteca de procesamiento de lenguaje natural (NLP) de código abierto. Se utiliza para el procesamiento de texto, incluyendo tokenización, análisis gramatical y extracción de información. La clase _Matcher_ es una clase de SpaCy que permite realizar coincidencias de patrones en texto utilizando reglas definidas. Se utiliza para encontrar patrones específicos en el texto, como verbos de acción o frases nominales.
+Biblioteca de procesamiento de lenguaje natural (NLP) de código abierto. Se utiliza para el procesamiento de texto, incluyendo tokenización, análisis gramatical y extracción de información. En este caso se usa para comparar las respuestas del usuario con las respuestas correctas y determinar el grado de acierto.
 
 - [SQLite](https://www.sqlite.org/index.html)
-Se utiliza para almacenar las preguntas y respuestas de la aplicación. SQLite es una base de datos relacional que se utiliza en aplicaciones de pequeño y mediano tamaño. Es la **base de conocimiento** de un sistema experto, usado en inteligencia artificial.
+Se utiliza para almacenar las preguntas y respuestas de la aplicación. SQLite es una base de datos relacional que se utiliza en aplicaciones de pequeño y mediano tamaño.
 
-- [Bootstrap y CSS](https://getbootstrap.com)
-Framework de código abierto para el diseño de sitios web y aplicaciones web. Se utiliza en este proyecto para el diseño de la interfaz de usuario.
+- [Bootstrap y SCSS](https://getbootstrap.com)
+Diseño de la interfaz de usuario.
 
 [subir](#contenido)
 
@@ -66,50 +81,29 @@ El proyecto está estructurado de la siguiente manera:
   
 - **templates/**: Carpeta que contiene los archivos HTML de la aplicación.
   
-- **static/**: Carpeta que contiene los archivos estáticos de la aplicación, como CSS, JavaScript e Imágenes.
-
-- **test/**: Carpeta que contiene los archivos de prueba de la aplicación.
-  
-- **README.md**: Archivo que contiene la documentación del proyecto.
-
-- **.gitignore**: Archivo que contiene los archivos y carpetas que se ignorarán en el control de versiones.
+- **static/**: Carpeta que contiene los archivos estáticos de la aplicación, como estilo e imágenes.
 
 [subir](#contenido)
 
-## 6. Flujo de Trabajo. **Revisar**
+## 6. Flujo de Trabajo. 
 
-### Paso 1: Identificar Temas Clave para Entrevistas de Desarrollo Web.
+__Paso 1__: Identificación de temas clave para la prueba.
 
-- Fundamentos de Python
-- Librerías de Python
-- POO con Python
+__Paso 2__: Recopilación de preguntas y respuestas relacionadas con los temas.
 
-### Paso 2: Recopilar Preguntas Frecuentes de Entrevistas.
+__Paso 3__: Estructurar la Base de Conocimientos.
 
-Reúne una variedad de preguntas comunes que se hacen en entrevistas de trabajo relacionadas con el desarrollo web. 
+__Paso 4__: Implementar la Lógica del Sistema Experto.
 
-### Paso 3: Estructurar la Base de Conocimientos.
+__Paso 5__: Desarrollo de la interfaz de usuario.
 
-- Organiza las preguntas recopiladas en categorías lógicas, como "Fundamentos de Python", "Librerías de Python" y "POO con Python".
-- Crear Modelos de Respuesta: Desarrolla modelos de respuesta para cada pregunta que incluyan la respuesta correcta, ejemplos prácticos y explicaciones detalladas.
+__Paso 6__: Pruebas técnicas.
 
-### Paso 4: Implementar la Lógica del Sistema Expert.
-
-- Utiliza Python para implementar la lógica del sistema experto. Puedes considerar el uso de bibliotecas como pyknow para representar reglas de inferencia o implementar tu propia lógica de procesamiento de preguntas y respuestas.
-
-### Paso 5: Integrar Interfaz de Usuario
-Desarrolla una interfaz de usuario que permita a los usuarios interactuar con el sistema experto. Puedes optar por una interfaz de línea de comandos, una aplicación web simple o una interfaz gráfica de usuario (GUI) según tus preferencias y habilidades.
-
-### Paso 6: Alimentar el Sistema con Preguntas y Respuestas
-Incorporar Preguntas y Respuestas: Introduce las preguntas y respuestas recopiladas en la base de conocimientos del sistema experto.
 
 [subir](#contenido)
 
-## 7. Uso de la aplicación. **TODO**
 
-Para utilizar la aplicación **WebWizard** sigue los siguientes pasos:
-
-## 8. Mejoras.
+## 7. Mejoras.
 
 - **Añadir más categorías de preguntas**: En futuras versiones se pueden añadir más categorías de preguntas, como "JavaScript", "React", "Django" y "Machine Learning".
   
@@ -129,13 +123,13 @@ Para utilizar la aplicación **WebWizard** sigue los siguientes pasos:
 
 [subir](#contenido)
 
-## 9. Licencia.
+## 8. Licencia.
 
 Este proyecto está bajo la **licencia MIT**.
 
 [subir](#contenido)
 
-## 10. Autores.
+## 9. Autores.
 
 - [José Miguel Escribano Ruiz](https://github.com/JMER15)
 - [Virginia Ordoño Bernier](https://github.com/viorbe20)
