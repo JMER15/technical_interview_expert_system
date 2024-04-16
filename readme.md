@@ -1,6 +1,9 @@
 # Desarrollo del Proyecto "TechTest: Sistema Experto para Entrevistas Técnicas."
 
-![expert_system](./static/img/sistema-experto.png)
+<div style="text-align:center">
+<img style="width:500px" src="./static/img/sistema-experto.png"></img>
+</div>
+
 
 ## Contenido
 
@@ -8,7 +11,7 @@
 - **[2. Objetivo](#2-objetivo)**
 - **[3. Funcionamiento de la aplicación](#3-funcionamiento-de-la-aplicación)**
 - **[4. Tecnologías utilizadas](#4-tecnologías-utilizadas)**
-- **[5. Estructura del proyecto](#5-estructura-del-proyecto)**Descri
+- **[5. Estructura del proyecto](#5-estructura-del-proyecto)**
 - **[6. Flujo de Trabajo](#6-flujo-de-trabajo)**
 - **[7. Mejoras](#8mejoras)**
 - **[8. Licencia](#9-licencia)**
