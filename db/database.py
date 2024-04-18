@@ -78,12 +78,12 @@ qa_pair_css = [
 # Preguntas y respuestas sobre expert systems
 qa_pair_expert_systems = [
     ("¿Qué es un sistema experto?", "Software capaz de simular el proceso de decisión que tomaría un experto humano en cierto campo en la solución de un problema.", 1),
-    ("Características de los sistemas expertos", "Especialización, emulación del pensamiento humano, capacidad de aprendizajje, interactividad", 3),
+    ("Características de los sistemas expertos", "Especialización, emulación del pensamiento humano, capacidad de aprendizaje, interactividad", 3),
     ("Tipos de sistemas expertos", "Casos, árboles de decisión, redes bayesianas, reglas", 2),
-    ("¿Qué 3 tipos de conocimiento puede aportar un experto?", "Procedimental, heurístico, factual", 2)
+    ("¿Qué 3 tipos de conocimiento puede aportar un experto?", "Procedimental, heurístico, factual", 2),
     ("¿Qué dos estrategias de control se utilizan en los sistemas expertos?", "Razonamiento hacia adelante y razonamiento hacia atrás", 1),
-    ("¿Qué es el razonamiento hacia adelante?", "Se parte de los datos y se llega a las conclusiones", 3),
-    ("¿Qué es el razonamiento hacia atrás?", "Se parte de las conclusiones y se llega a los datos", 2),
+    ("Nombra los cinco elementos que componen un sistema experto", "Interfaz de usuario, base de conocimiento, sistema para la adquisición de conocimiento, sistema de aplicación de decisiones, motor de inferencia", 3),
+    ("Nombre los tres tipos de interfaz de usuario", "Gráfica, modo texto, combinación de ambas", 2),
 ]
     
 
@@ -98,12 +98,20 @@ insert_query2 = '''
     VALUES (?, ?, ?)
 '''
 
+insert_query3 = '''
+    INSERT INTO qa_pair_expert_systems (question, answer, level)
+    VALUES (?, ?, ?)
+'''
+
 # Ejecuta la sentencia SQL de inserción para cada pregunta y respuesta
 for question, answer, level in qa_pair_python:
     cursor.execute(insert_query, (question, answer, level))
 
 for question, answer, level in qa_pair_css:
     cursor.execute(insert_query2, (question, answer, level))
+    
+for question, answer, level in qa_pair_expert_systems:
+    cursor.execute(insert_query3, (question, answer, level))
 
 # Guarda los cambios
 conn.commit()
